@@ -3,12 +3,12 @@ import dayjs from 'dayjs';
 import StyledPublicationDate from '../styles/DateLine.style';
 import { ReactComponent as PlusIcon } from '../assets/icons/plus.svg';
 
-interface PublicationDateProps {
+interface IPublicationDateProps {
   publicationDate: string | undefined
 }
 
-const PublicationDate: FC<PublicationDateProps> = ({ publicationDate }) => {
-  const time = dayjs(publicationDate).format('ddd, DD MMMM YYYY hh:mm A');
+const PublicationDate: FC<IPublicationDateProps> = ({ publicationDate }) => {
+  const time = publicationDate && dayjs(publicationDate).format('ddd, DD MMMM YYYY hh:mm A');
   return (
     <StyledPublicationDate>
       <time dateTime={publicationDate}>{time}</time>

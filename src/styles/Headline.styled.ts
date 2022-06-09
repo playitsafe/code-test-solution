@@ -1,6 +1,6 @@
 import styled from 'styled-components'; 
 
-const Headline = styled.h1`
+const StyledHeadline = styled.h1`
   font-size: 36px;
   font-weight: 300;
 
@@ -9,4 +9,4 @@ const Headline = styled.h1`
   }
 `
 
-export default Headline;
+export default StyledHeadline;

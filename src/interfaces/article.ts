@@ -3,25 +3,27 @@ export interface IArticle {
   source: string,
   byline: string,
   publicationDate: string,
-  blocks: (ITextBlock|IImageBlock|IPullQuote)[]
+  blocks: (ITextBlock | IImageBlock | IPullQuoteBlock)[]
 }
 
-export interface ITextBlock {
-  kind: EBlockKind.TEXT,
-  text: string,
-  intentions: IIntention[]
+// export type TBlock = ITextBlock | IImageBlock | IPullQuoteBlock;
+export interface IBaseBlock {
+  kind: EBlockKind
 }
 
-export interface IImageBlock {
-  kind: EBlockKind.IMAGE,
-  captionText: string,
-  url: string
+export interface ITextBlock extends IBaseBlock {
+  text?: string,
+  intentions?: IIntention[]
 }
 
-export interface IPullQuote {
-  kind: EBlockKind.PULL_QUOTE,
-  captionText: string,
-  url: string
+export interface IImageBlock extends IBaseBlock {
+  captionText?: string,
+  url?: string
+}
+
+export interface IPullQuoteBlock extends IBaseBlock {
+  captionText?: string,
+  url?: string
 }
 
 export enum EBlockKind {
@@ -37,6 +39,12 @@ export interface IIntention {
 }
 
 export enum EIntentionKind {
+  PLAIN = 'plain',
   EMPHASIZED = 'emphasized',
   IMPORTANT = 'important'
+}
+
+export interface IRenderTextBlockElement {
+  tag: EIntentionKind,
+  text: string | undefined
 }

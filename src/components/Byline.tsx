@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import StyledByLine from '../styles/ByLine.styled';
 
-interface ByLineProps {
+interface IByLineProps {
   byline: string | undefined,
   source: string | undefined,
 }
 
-const ByLine: FC<ByLineProps> = ({ byline, source }) => {
+const ByLine: FC<IByLineProps> = ({ byline, source }) => {
   return (
     <StyledByLine>
       <span>{byline}</span>
