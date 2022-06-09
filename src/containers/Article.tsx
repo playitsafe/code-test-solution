@@ -1,6 +1,10 @@
 import React, { FC, useState, useEffect } from 'react';
 import axios from "axios";
-import Headline from '../components/Headline';
+import {
+  Headline,
+  Byline
+} from '../components/index';
+// import Byline from '../components/Byline';
 import { StyledArticle } from '../styles/Article.styled'
 import { IArticle } from '../interfaces/article'
 
@@ -23,6 +27,7 @@ const Article: FC<ArticleProps> = () => {
   return (
     <StyledArticle>
       <Headline headline={article?.headline}></Headline>
+      <Byline byline={article?.byline} source={article?.source} />
     </StyledArticle>
   );
 }
