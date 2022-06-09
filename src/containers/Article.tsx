@@ -1,5 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import axios from "axios";
+import Headline from '../components/Headline';
 import { StyledArticle } from '../styles/Article.styled'
 import { IArticle } from '../interfaces/article'
 
@@ -21,7 +22,7 @@ const Article: FC<ArticleProps> = () => {
   }, [])
   return (
     <StyledArticle>
-    123
+      <Headline headline={article?.headline}></Headline>
     </StyledArticle>
   );
 }

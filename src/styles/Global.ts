@@ -9,11 +9,6 @@ export default createGlobalStyle`
       font-family: 'Merriweather', sans-serif;
   }
 
-  h1 {
-    font-size: 36px;
-    font-weight: 300;
-  }
-
   #root {
     margin: 0 auto;
   }
