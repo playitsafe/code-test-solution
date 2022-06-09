@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledByline = styled.p`
+const StyledByLine = styled.p`
   margin-top: 16px;
 
   span:first-child {
@@ -16,4 +16,4 @@ const StyledByline = styled.p`
   }
 `
 
-export default StyledByline;
+export default StyledByLine;

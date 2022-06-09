@@ -2,7 +2,8 @@ import React, { FC, useState, useEffect } from 'react';
 import axios from "axios";
 import {
   Headline,
-  Byline
+  ByLine,
+  PublicationDate
 } from '../components/index';
 // import Byline from '../components/Byline';
 import { StyledArticle } from '../styles/Article.styled'
@@ -27,7 +28,8 @@ const Article: FC<ArticleProps> = () => {
   return (
     <StyledArticle>
       <Headline headline={article?.headline}></Headline>
-      <Byline byline={article?.byline} source={article?.source} />
+      <ByLine byline={article?.byline} source={article?.source} />
+      <PublicationDate publicationDate={article?.publicationDate} />
     </StyledArticle>
   );
 }

@@ -1,18 +1,18 @@
 import React, { FC } from 'react';
-import StyledByline from '../styles/Byline.styled';
+import StyledByLine from '../styles/ByLine.styled';
 
-interface BylineProps {
+interface ByLineProps {
   byline: string | undefined,
   source: string | undefined,
 }
 
-const Byline: FC<BylineProps> = ({ byline, source }) => {
+const ByLine: FC<ByLineProps> = ({ byline, source }) => {
   return (
-    <StyledByline>
+    <StyledByLine>
       <span>{byline}</span>
       <em>{source}</em>
-    </StyledByline>
+    </StyledByLine>
   );
 }
 
-export default Byline;
+export default ByLine;
