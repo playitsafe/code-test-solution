@@ -4,6 +4,7 @@ import Article from './containers/Article';
 import GlobalStyle from "./styles/Global"
 
 const theme = {
+  dividerColor: '#979797',
   breakpoints: {
     desktop: '1200px',
     tab: '768px',

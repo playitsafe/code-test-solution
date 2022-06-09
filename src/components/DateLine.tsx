@@ -13,7 +13,6 @@ const PublicationDate: FC<PublicationDateProps> = ({ publicationDate }) => {
     <StyledPublicationDate>
       <time dateTime={publicationDate}>{time}</time>
       <PlusIcon />
-      <hr />
     </StyledPublicationDate>
   );
 }

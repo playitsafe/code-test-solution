@@ -1,9 +1,11 @@
 import Headline from './Headline';
 import ByLine from './ByLine';
-import PublicationDate from './DateLine';
+import DateLine from './DateLine';
+import Block from './Block';
 
 export {
   Headline,
   ByLine,
-  PublicationDate
+  DateLine,
+  Block
 }

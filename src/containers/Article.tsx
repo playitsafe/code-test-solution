@@ -3,7 +3,8 @@ import axios from "axios";
 import {
   Headline,
   ByLine,
-  PublicationDate
+  DateLine,
+  Block
 } from '../components/index';
 // import Byline from '../components/Byline';
 import { StyledArticle } from '../styles/Article.styled'
@@ -29,7 +30,7 @@ const Article: FC<ArticleProps> = () => {
     <StyledArticle>
       <Headline headline={article?.headline}></Headline>
       <ByLine byline={article?.byline} source={article?.source} />
-      <PublicationDate publicationDate={article?.publicationDate} />
+      <DateLine publicationDate={article?.publicationDate} />
     </StyledArticle>
   );
 }
