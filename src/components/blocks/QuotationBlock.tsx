@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import StyledQuotationBlock from '../../styles/QuotationBlock.styled';
 import type { IPullQuoteBlock } from '../../interfaces/article';
 
 interface IQuotationBlockProps {
@@ -7,7 +8,10 @@ interface IQuotationBlockProps {
 
 const QuotationBlock: FC<IQuotationBlockProps> = ({ item }) => {
   return (
-    <>3</>
+    <StyledQuotationBlock>
+      {item.text}
+      <small>{item.attribution}</small>
+    </StyledQuotationBlock>
   );
 }
 

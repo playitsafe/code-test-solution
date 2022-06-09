@@ -5,6 +5,7 @@ import GlobalStyle from "./styles/Global"
 
 const theme = {
   dividerColor: '#979797',
+  deepBlue: '#0236CB',
   breakpoints: {
     desktop: '1200px',
     tab: '768px',

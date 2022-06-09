@@ -22,8 +22,8 @@ export interface IImageBlock extends IBaseBlock {
 }
 
 export interface IPullQuoteBlock extends IBaseBlock {
-  captionText?: string,
-  url?: string
+  text?: string,
+  attribution?: string
 }
 
 export enum EBlockKind {
