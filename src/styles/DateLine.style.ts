@@ -10,8 +10,8 @@ const StyledDateLine = styled.p`
   }
 
   svg {
-    height: 12px;
-    width: 12px;
+    height: 15px;
+    width: 15px;
     margin-left: 5px;
   }
 `

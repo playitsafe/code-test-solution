@@ -2,11 +2,14 @@ import React from "react";
 import type { IIntention, ITextBlock, IRenderTextBlockElement } from '../interfaces/article';
 import { EIntentionKind } from '../interfaces/article';
 
-const sortIntentions = (sortKey: string) => {
+export const sortIntentions = (sortKey: string) => {
   return (i: any, j: any) => i[sortKey] - j[sortKey];
 }
 
-const convertIntendedContent = (text: string, sortedIntentions: IIntention[]): IRenderTextBlockElement[] => {
+/**
+ * Split origin text based on index and Re-organize text structure
+ */
+export const convertIntendedContent = (text: string, sortedIntentions: IIntention[]): IRenderTextBlockElement[] => {
   const length = text.length;
   const renderElements: IRenderTextBlockElement[] = [];
   let beginIndex = 0;
@@ -35,13 +38,12 @@ const convertIntendedContent = (text: string, sortedIntentions: IIntention[]): I
   return renderElements;
 }
 
-const useTextBlockIntentions = (textBlockItem: ITextBlock) => {
+export const useTextBlock = (textBlockItem: ITextBlock) => {
   const { text, intentions } = textBlockItem;
+  // Return whole block as plain text if no intention is specified
   if (!intentions || !text || intentions.length < 1) return [{ tag: EIntentionKind.PLAIN, text }];
   // Sort intentions by ascend index to prevent disorder after splitting
   const sortedIntentions = intentions.sort(sortIntentions( 'index'));
 
   return convertIntendedContent(text, sortedIntentions);
 }
-
-export default useTextBlockIntentions;

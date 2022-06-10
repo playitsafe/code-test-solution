@@ -4,7 +4,7 @@ import StyledPublicationDate from '../styles/DateLine.style';
 import { ReactComponent as PlusIcon } from '../assets/icons/plus.svg';
 
 interface IPublicationDateProps {
-  publicationDate: string | undefined
+  publicationDate: string
 }
 
 const PublicationDate: FC<IPublicationDateProps> = ({ publicationDate }) => {

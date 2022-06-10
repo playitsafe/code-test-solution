@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import StyledTextBlock from '../../styles/TextBlock.styled';
-import useTextBlockIntentions from '../../hooks/useTextBlockIntentions';
+import { useTextBlock } from '../../hooks/useTextBlock';
 import type { ITextBlock, IRenderTextBlockElement } from '../../interfaces/article';
 import { EIntentionKind } from '../../interfaces/article';
 
@@ -15,8 +15,7 @@ const renderElementMap = {
 }
 
 const TextBlock: FC<ITextBlockProps> = ({ item }) => {
-  const intendedContents = useTextBlockIntentions(item);
-  console.log('intendedContents', intendedContents);
+  const intendedContents = useTextBlock(item);
   return (
     <StyledTextBlock>
       {intendedContents.map((content, key) => {

@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import StyledImageBlock from '../../styles/ImageBlock.styled';
 import { ReactComponent as CameraIcon } from '../../assets/icons/camera.svg';
-
 import type { IImageBlock } from '../../interfaces/article';
 interface IImageBlockProps {
   item: IImageBlock

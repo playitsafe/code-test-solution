@@ -6,7 +6,6 @@ export interface IArticle {
   blocks: (ITextBlock | IImageBlock | IPullQuoteBlock)[]
 }
 
-// export type TBlock = ITextBlock | IImageBlock | IPullQuoteBlock;
 export interface IBaseBlock {
   kind: EBlockKind
 }

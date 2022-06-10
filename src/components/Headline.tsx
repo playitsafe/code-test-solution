@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import StyledHeadline from '../styles/Headline.styled';
 
 interface IHeadlineProps {
-  headline: string | undefined
+  headline: string
 }
 
 const Headline: FC<IHeadlineProps> = ({ headline }) => {

@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import StyledByLine from '../styles/ByLine.styled';
 
 interface IByLineProps {
-  byline: string | undefined,
-  source: string | undefined,
+  byline: string,
+  source: string,
 }
 
 const ByLine: FC<IByLineProps> = ({ byline, source }) => {
