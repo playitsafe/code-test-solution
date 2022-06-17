@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { Headline, ByLine, DateLine, Block } from '../components/index';
 import StyledArticle from '../styles/Article.styled'
@@ -21,7 +21,7 @@ const Article = () => {
   }, [])
   return (
     <StyledArticle>
-      <Headline headline={article?.headline}></Headline>
+      <Headline headline={article.headline}></Headline>
       <ByLine byline={article.byline} source={article.source} />
       <DateLine publicationDate={article.publicationDate} />
       {

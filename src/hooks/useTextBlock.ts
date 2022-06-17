@@ -1,4 +1,3 @@
-import React from "react";
 import type { IIntention, ITextBlock, IRenderTextBlockElement } from '../interfaces/article';
 import { EIntentionKind } from '../interfaces/article';
 
